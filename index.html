@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>FreeMediaNews - Free Sports Streaming Links</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Watch legal and free sports streams from Tubi, Samsung TV Plus, and Pluto TV. Curated by FreeMediaNews.">
+  <meta charset="UTF-8" />
+  <title>FreeMediaNews - Embedded Free Sports Streaming</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -12,53 +11,41 @@
       background-color: #f4f4f4;
       color: #333;
     }
-
     header {
       background-color: #007bff;
       color: white;
       padding: 20px;
       text-align: center;
     }
-
     nav a {
       margin: 0 15px;
       color: white;
       text-decoration: none;
       font-weight: bold;
     }
-
     section {
-      padding: 20px;
-      max-width: 800px;
-      margin: auto;
+      max-width: 900px;
+      margin: 20px auto;
       background: white;
-      margin-top: 20px;
+      padding: 15px;
       border-radius: 6px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
-
     h2 {
       color: #007bff;
     }
-
-    ul {
-      list-style-type: none;
-      padding: 0;
+    iframe {
+      width: 100%;
+      height: 480px;
+      border: none;
+      margin-top: 10px;
+      border-radius: 6px;
     }
-
-    li {
-      margin: 10px 0;
+    .note {
+      font-size: 0.9em;
+      color: #666;
+      margin-top: 5px;
     }
-
-    a {
-      color: #007bff;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
     footer {
       text-align: center;
       padding: 20px;
@@ -70,47 +57,55 @@
 </head>
 <body>
 
-  <header>
-    <h1>FreeMediaNews</h1>
-    <p>Your trusted source for legal, free sports streams</p>
-    <nav>
-      <a href="#live">Live Now</a>
-      <a href="#sports">Sports</a>
-      <a href="#platforms">Platforms</a>
-    </nav>
-  </header>
+<header>
+  <h1>FreeMediaNews</h1>
+  <p>Your trusted source for legal, free sports streams</p>
+  <nav>
+    <a href="#pluto">Pluto TV</a>
+    <a href="#tubi">Tubi</a>
+    <a href="#samsung">Samsung TV Plus</a>
+  </nav>
+</header>
 
-  <section id="live">
-    <h2>🔴 Live Now</h2>
-    <ul>
-      <li><a href="https://tubitv.com/live/695717" target="_blank">Tubi - FOX Sports Live</a></li>
-      <li><a href="https://www.samsungtvplus.com" target="_blank">Samsung TV Plus - CBS Sports HQ</a></li>
-      <li><a href="https://pluto.tv/live-tv/fox-sports" target="_blank">Pluto TV - FOX Sports</a></li>
-    </ul>
-  </section>
+<section id="pluto">
+  <h2>📺 Pluto TV - FOX Sports (Embedded)</h2>
+  <iframe 
+    src="https://pluto.tv/embed/channel/fox-sports" 
+    allowfullscreen
+    sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
+  ></iframe>
+  <p class="note">* Embedded directly from Pluto TV’s official embed URL.</p>
+</section>
 
-  <section id="sports">
-    <h2>🏆 Browse by Sport</h2>
-    <ul>
-      <li><a href="https://tubitv.com/category/sports" target="_blank">Football (Tubi)</a></li>
-      <li><a href="https://pluto.tv/en/live-tv/fox-sports" target="_blank">Basketball (Pluto)</a></li>
-      <li><a href="https://www.samsungtvplus.com" target="_blank">Golf (Samsung TV Plus)</a></li>
-    </ul>
-  </section>
+<section id="tubi">
+  <h2>📺 Tubi - FOX Sports</h2>
+  <iframe 
+    src="https://tubitv.com/live/695717" 
+    allowfullscreen
+    sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
+    style="height: 600px;"
+  ></iframe>
+  <p class="note">* Tubi does not officially provide an embed player, this is their live page in an iframe (may or may not work depending on their site restrictions).</p>
+</section>
 
-  <section id="platforms">
-    <h2>📺 Platforms</h2>
-    <ul>
-      <li><a href="https://tubitv.com/live" target="_blank">Tubi Live</a></li>
-      <li><a href="https://www.samsungtvplus.com" target="_blank">Samsung TV Plus</a></li>
-      <li><a href="https://pluto.tv" target="_blank">Pluto TV</a></li>
-    </ul>
-  </section>
+<section id="samsung">
+  <h2>📺 Samsung TV Plus - CBS Sports HQ</h2>
+  <iframe 
+    src="https://www.samsungtvplus.com/channel/cbs-sports-hq" 
+    allowfullscreen
+    sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
+    style="height: 600px;"
+  ></iframe>
+  <p class="note">* Samsung TV Plus does not provide official embedding, this shows their channel page embedded and may be limited.</p>
+</section>
 
-  <footer>
-    <p>Disclaimer: FreeMediaNews links only to public, legal, and free sports streaming platforms. We do not host or rebroadcast any content.</p>
-    <p>&copy; 2025 FreeMediaNews</p>
-  </footer>
+<footer>
+  <p>
+    Disclaimer: FreeMediaNews embeds only publicly available, legal streams from official sources.
+    We do not host or redistribute any content.
+  </p>
+  <p>&copy; 2025 FreeMediaNews</p>
+</footer>
 
 </body>
 </html>
