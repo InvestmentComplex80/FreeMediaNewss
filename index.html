@@ -2,26 +2,18 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>FreeMediaNews - Embedded Free Sports Streaming</title>
+  <title>FreeMediaNews - Legal Free Sports Streams</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
     body {
       font-family: Arial, sans-serif;
-      margin: 0;
-      background-color: #f4f4f4;
-      color: #333;
+      margin: 0; background: #f4f4f4; color: #333;
     }
     header {
-      background-color: #007bff;
-      color: white;
-      padding: 20px;
-      text-align: center;
+      background: #007bff; color: white; padding: 20px; text-align: center;
     }
     nav a {
-      margin: 0 15px;
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
+      margin: 0 15px; color: white; text-decoration: none; font-weight: bold;
     }
     section {
       max-width: 900px;
@@ -38,18 +30,25 @@
       width: 100%;
       height: 480px;
       border: none;
-      margin-top: 10px;
       border-radius: 6px;
+      margin-top: 10px;
     }
-    .note {
-      font-size: 0.9em;
-      color: #666;
-      margin-top: 5px;
+    p.link-fallback {
+      font-size: 1rem;
+      margin-top: 12px;
+    }
+    p.link-fallback a {
+      color: #007bff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    p.link-fallback a:hover {
+      text-decoration: underline;
     }
     footer {
       text-align: center;
       padding: 20px;
-      background-color: #222;
+      background: #222;
       color: #ccc;
       margin-top: 30px;
     }
@@ -71,39 +70,24 @@
   <h2>📺 Pluto TV - FOX Sports (Embedded)</h2>
   <iframe 
     src="https://pluto.tv/embed/channel/fox-sports" 
-    allowfullscreen
+    allowfullscreen 
     sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
   ></iframe>
-  <p class="note">* Embedded directly from Pluto TV’s official embed URL.</p>
+  <p class="link-fallback">If the player doesn't load, watch live directly on <a href="https://pluto.tv/live-tv/fox-sports" target="_blank" rel="noopener noreferrer">Pluto TV FOX Sports</a>.</p>
 </section>
 
 <section id="tubi">
   <h2>📺 Tubi - FOX Sports</h2>
-  <iframe 
-    src="https://tubitv.com/live/695717" 
-    allowfullscreen
-    sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
-    style="height: 600px;"
-  ></iframe>
-  <p class="note">* Tubi does not officially provide an embed player, this is their live page in an iframe (may or may not work depending on their site restrictions).</p>
+  <p class="link-fallback">Embedding is not allowed by Tubi. Watch live on their official site: <a href="https://tubitv.com/live/695717" target="_blank" rel="noopener noreferrer">Tubi FOX Sports Live</a>.</p>
 </section>
 
 <section id="samsung">
   <h2>📺 Samsung TV Plus - CBS Sports HQ</h2>
-  <iframe 
-    src="https://www.samsungtvplus.com/channel/cbs-sports-hq" 
-    allowfullscreen
-    sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
-    style="height: 600px;"
-  ></iframe>
-  <p class="note">* Samsung TV Plus does not provide official embedding, this shows their channel page embedded and may be limited.</p>
+  <p class="link-fallback">Embedding is not allowed by Samsung TV Plus. Watch live on their official site: <a href="https://www.samsungtvplus.com" target="_blank" rel="noopener noreferrer">Samsung TV Plus</a>.</p>
 </section>
 
 <footer>
-  <p>
-    Disclaimer: FreeMediaNews embeds only publicly available, legal streams from official sources.
-    We do not host or redistribute any content.
-  </p>
+  <p>Disclaimer: FreeMediaNews only links to legal, free streaming platforms. No content is hosted or redistributed here.</p>
   <p>&copy; 2025 FreeMediaNews</p>
 </footer>
 
