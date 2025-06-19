@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>FreeMediaNews - Legal Free Sports Streams</title>
+  <title>FreeMediaNews - Legal Free Sports Streams + Custom Stream</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
     body {
@@ -26,12 +26,13 @@
     h2 {
       color: #007bff;
     }
-    iframe {
+    iframe, video {
       width: 100%;
       height: 480px;
       border: none;
       border-radius: 6px;
       margin-top: 10px;
+      background: black;
     }
     p.link-fallback {
       font-size: 1rem;
@@ -63,6 +64,7 @@
     <a href="#pluto">Pluto TV</a>
     <a href="#tubi">Tubi</a>
     <a href="#samsung">Samsung TV Plus</a>
+    <a href="#custom">Custom Stream</a>
   </nav>
 </header>
 
@@ -86,10 +88,40 @@
   <p class="link-fallback">Embedding is not allowed by Samsung TV Plus. Watch live on their official site: <a href="https://www.samsungtvplus.com" target="_blank" rel="noopener noreferrer">Samsung TV Plus</a>.</p>
 </section>
 
+<section id="custom">
+  <h2>📺 Custom Stream</h2>
+  <video id="customPlayer" controls autoplay muted></video>
+  <p class="link-fallback">If the stream does not load, it might be restricted or not compatible with your browser.</p>
+</section>
+
 <footer>
   <p>Disclaimer: FreeMediaNews only links to legal, free streaming platforms. No content is hosted or redistributed here.</p>
   <p>&copy; 2025 FreeMediaNews</p>
 </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+<script>
+  const video = document.getElementById('customPlayer');
+  const streamUrl = 'http://1tv41.icu:8080/5ZCJFs/416986/53704';
+
+  if (Hls.isSupported()) {
+    const hls = new Hls();
+    hls.loadSource(streamUrl);
+    hls.attachMedia(video);
+    hls.on(Hls.Events.MANIFEST_PARSED, () => {
+      video.play();
+    });
+  } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+    // Some browsers (Safari) support HLS natively
+    video.src = streamUrl;
+    video.addEventListener('loadedmetadata', () => {
+      video.play();
+    });
+  } else {
+    // HLS not supported
+    alert('Your browser does not support HLS streaming.');
+  }
+</script>
 
 </body>
 </html>
